@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Exception Handling/src/FourthActivity/MyDate.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="FourthActivity.MyDate"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="12&#13;&#10;12&#13;&#10;2333&#13;&#10;31&#13;&#10;06&#13;&#10;1995&#13;&#10;123&#13;&#10;45&#13;&#10;6789&#13;&#10;12&#13;&#10;34&#13;&#10;1234&#13;&#10;12&#13;&#10;1&#13;&#10;1234&#13;&#10;13&#13;&#10;12&#13;&#10;6789"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Exception Handling"/>
+</launchConfiguration>

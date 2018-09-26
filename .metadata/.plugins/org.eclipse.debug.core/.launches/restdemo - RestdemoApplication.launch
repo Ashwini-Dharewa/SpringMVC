@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/restdemo/src/main/java/com/capgemini/restwebservice/restdemo/RestdemoApplication.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.capgemini.restwebservice.restdemo.RestdemoApplication"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="restdemo"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dspring.liveBeansView.mbeanDomain&#10;-Dcom.sun.management.jmxremote&#10;-Dcom.sun.management.jmxremote.port=49267&#10;-Dcom.sun.management.jmxremote.authenticate=false&#10;-Dcom.sun.management.jmxremote.ssl=false&#10;"/>
+</launchConfiguration>

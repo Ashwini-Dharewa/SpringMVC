@@ -1,0 +1,19 @@
+package Assignment1;
+
+public class BuilderString {
+
+	public static void main(String[] args) {
+		String st="C:\\IBM\\DB2\\PROGRAM\\DB2COPY1.EXE";
+		String d=st.substring(0,(st.indexOf('\\')+1));
+		System.out.println("Drive:"+d);
+		String a1=st.substring((st.indexOf('\\')+1),(st.indexOf('M')+1));
+		String a2=st.substring(7,10);
+		String a3=st.substring(11,18);
+		String a=a1+" || "+a2+" || "+a3;
+		System.out.println("Folders: "+a);
+		String f=st.substring(19,st.length());
+		System.out.println("File:"+f);
+
+	}
+
+}

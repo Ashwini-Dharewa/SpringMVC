@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="bootdemo"/>
+<aop-project name="Spring-MVC-LoginForm"/>
+<aop-project name="rest"/>
+<aop-project name="demorest"/>
+<aop-project name="SpringBootHibernate"/>
+<aop-project name="lazy-days"/>
+<aop-project name="travel"/>
+<aop-project name="MakeMyTrip"/>
+<aop-project name="courseapi"/>
+<aop-project name="java-mongodb"/>
+</aop-reference-model>

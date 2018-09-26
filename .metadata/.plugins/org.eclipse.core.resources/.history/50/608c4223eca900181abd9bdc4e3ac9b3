@@ -1,0 +1,73 @@
+package com.java.mongo.javamongodb;
+	import java.util.Iterator;
+
+import javax.management.Query;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.MongoClient;  
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;  
+import com.mongodb.client.MongoDatabase;  
+import com.mongodb.client.model.Filters;
+
+import org.bson.Document;  
+	public class JavaMongoDemo {  
+	public static void main(String[] args){  
+	try{  
+	//---------- Connecting DataBase -------------------------//  
+	MongoClient mongoClient = new MongoClient( "localhost" , 27017 );  
+	//---------- Creating DataBase ---------------------------//  
+	MongoDatabase db = mongoClient.getDatabase("dataList");  
+	//---------- Creating Collection -------------------------//  
+	MongoCollection<Document> table = db.getCollection("restaurantName");  
+	
+	
+	FindIterable<Document> iterDoc =table.find(); 
+    int i = 1;  
+    Iterator it = iterDoc.iterator();   
+    while (it.hasNext()) {  
+       System.out.println(it.next());  
+    i++;    
+    }
+    System.out.println("Retrieved all documents!\n\n");
+    
+    MongoClient mongo = new MongoClient( "localhost" , 27017 ); 
+   DB db2=mongo.getDB("dataList");
+   DBCollection coll = db2.getCollection("restaurantName");
+   BasicDBObject allQuery = new BasicDBObject();
+   BasicDBObject fields = new BasicDBObject();
+   fields.put("restaurant_id", 1);
+   fields.put("name", 1);
+   fields.put("borough", 1);
+   fields.put("cuisine", 1);  
+   DBCursor cursor = coll.find(allQuery, fields);
+   while (cursor.hasNext()) {
+   System.out.println(cursor.next());
+   }
+   
+   
+   System.out.println("Borough=Bronx");
+   FindIterable<Document> iter =table.find(Filters.eq("borough","Bronx")).limit(5); 
+   int i1 = 1;  
+   Iterator it1 = iter.iterator();   
+   while (it1.hasNext()) {  
+      System.out.println(it1.next());  
+   i1++;    
+   }
+   
+   
+
+    
+    
+    
+    
+	}catch(Exception e){  
+	System.out.println(e);  
+	}  
+}  
+}  
+
+

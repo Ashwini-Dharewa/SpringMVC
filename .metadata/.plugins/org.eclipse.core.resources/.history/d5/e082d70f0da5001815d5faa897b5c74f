@@ -1,0 +1,36 @@
+package com.spring.controller;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
+public class LoginBean {
+
+	 @NotNull(message="Your username must not be empty")
+		@Size(min=5, max=20, message = "Username must between 5 and 20 characters") 
+	 @Pattern(regexp="[a-zA-Z]+" ,message="Username can contain only alphabets.")
+		private String userName;
+		 @NotEmpty(message="Your password must not be empty")
+		    @Size(min = 8, max = 15, message="Password must be between 8 and 15 characters")
+		 @Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*)(?=.*[$@$!%*?&])[A-Za-z$@$!%*?&].{8,}$" ,message="Password must contain atleast one number,one upper case letter,one lower case letter and one special character")
+	private String password;
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+}
